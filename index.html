@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Padarias Curitiba — Doces Momentos</title>
-<meta name="description" content="Padarias Curitiba: padaria e confeitaria artesanal em Curitiba. Bolos, doces, macarons e pães feitos para os seus momentos especiais.">
+<meta name="description" content="Padarias Curitiba: padaria e confeitaria artesanal em Curitiba. Bolos, doces, macarons e encomendas para os seus momentos especiais.">
 <meta property="og:title" content="Padarias Curitiba — Doces Momentos">
 <meta property="og:description" content="Padaria e confeitaria artesanal em Curitiba.">
 <meta property="og:image" content="/img/bolo.jpg">
@@ -12,46 +12,63 @@
 <link rel="icon" href="/img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Jost:wght@300;400;500&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Bakery","name":"Padarias Curitiba","slogan":"Doces Momentos","image":"/img/bolo.jpg","sameAs":["https://www.instagram.com/padariascuritiba/"],"addressLocality":"Curitiba","addressRegion":"PR"}
+{"@context":"https://schema.org","@type":"Bakery","name":"Padarias Curitiba","slogan":"Doces Momentos","image":"/img/bolo.jpg","address":{"@type":"PostalAddress","addressLocality":"Curitiba","addressRegion":"PR","addressCountry":"BR"},"sameAs":["https://www.instagram.com/padariascuritiba/"]}
 </script>
 </head>
 <body>
 <header class="nav" id="top">
-  <a href="#top" class="brand"><img src="/img/logo.jpg" alt="Padarias Curitiba — Doces Momentos" width="56" height="56"></a>
+  <a href="#top" class="brand"><img src="/img/logo.jpg" alt="Padarias Curitiba — Doces Momentos" width="64" height="64"></a>
   <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   <nav id="menu">
-    <a href="#sobre">Sobre</a>
-    <a href="#produtos">Produtos</a>
+    <a href="#top" class="active">Home</a>
+    <a href="#produtos">Cardápio</a>
     <a href="#encomendas">Encomendas</a>
     <a href="#contato">Contato</a>
   </nav>
+  <p class="script nav-note">Mais que uma padaria,<br>um bom encontro.</p>
 </header>
 
 <section class="hero">
-  <img src="/img/bolo.jpg" alt="Bolo de chocolate com brigadeiros" class="hero-img">
+  <div class="strip">
+    <img src="/img/pudim.jpg" alt="Pudim caramelizado" fetchpriority="high">
+    <img src="/img/bolo.jpg" alt="Bolo de chocolate com brigadeiros" fetchpriority="high">
+    <img src="/img/macarons.jpg" alt="Macarons coloridos" fetchpriority="high">
+  </div>
   <div class="hero-shade"></div>
-  <div class="hero-text">
-    <p class="eyebrow">Padaria &amp; Confeitaria · Curitiba</p>
-    <h1>Doces <em>momentos</em><br>começam aqui</h1>
-    <a class="btn" href="#produtos">Conheça nossos produtos</a>
+  <p class="script hero-note">Alguns momentos pedem<br>um sabor especial.</p>
+</section>
+
+<section class="welcome">
+  <svg class="deco deco-l" viewBox="0 0 120 220" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 215C30 150 40 90 100 10"/><path d="M42 140c-25-5-35-25-34-45 25 2 38 18 34 45zM58 100c-20-12-22-35-12-52 22 10 28 32 12 52zM82 62c10-20 30-28 36-28-2 22-14 34-36 28zM38 175c20-8 40-4 52 10-22 12-42 8-52-10z"/></g></svg>
+  <svg class="deco deco-r" viewBox="0 0 140 120" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.3"><ellipse cx="40" cy="70" rx="30" ry="22" transform="rotate(-25 40 70)"/><path d="M18 78c20-4 38-18 44-38"/><ellipse cx="100" cy="60" rx="32" ry="24" transform="rotate(20 100 60)"/><path d="M76 52c22 6 40 2 54 14"/></g></svg>
+  <p class="script side-note">Sabor<br>em cada<br>detalhe.</p>
+  <div class="wrap narrow center reveal">
+    <p class="eyebrow"><span></span>Bem-vindo à<span></span></p>
+    <h1>Padarias Curitiba</h1>
+    <p>Padaria e confeitaria artesanal feita para os seus momentos especiais. Bolos, doces e macarons sempre fresquinhos, com atendimento acolhedor e o sabor que faz parte da sua rotina. Venha viver doces momentos conosco.</p>
+    <ul class="feats">
+      <li><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M8 40h32V26H8zM12 26c0-6 5-10 12-10s12 4 12 10M24 12v4M20 13l1 3M28 13l-1 3"/></g></svg><div><b>Bolos</b><span>Decorados com carinho</span></div></li>
+      <li><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M10 38c-4-8 0-22 14-22s18 14 14 22zM14 30c6-2 14-2 20 0M22 22l4 4"/></g></svg><div><b>Doces</b><span>Confeitaria artesanal</span></div></li>
+      <li><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><ellipse cx="24" cy="18" rx="14" ry="6"/><ellipse cx="24" cy="30" rx="14" ry="6"/><path d="M10 18v12M38 18v12M10 24c4 3 24 3 28 0"/></g></svg><div><b>Macarons</b><span>Cores e sabores</span></div></li>
+      <li><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M8 18h32v20H8zM8 18l16-8 16 8M24 18v20M8 28h32"/></g></svg><div><b>Encomendas</b><span>Para qualquer ocasião</span></div></li>
+    </ul>
+    <a class="pill" href="#produtos">Ver cardápio <span aria-hidden="true">→</span></a>
   </div>
 </section>
 
-<section class="about" id="sobre">
-  <div class="wrap narrow center reveal">
-    <p class="eyebrow dark">Nossa história</p>
-    <h2>Feito com calma, para ser dividido</h2>
-    <p>Na Padarias Curitiba, cada pão, bolo e doce é preparado com ingredientes selecionados e o cuidado de quem sabe que alguns momentos pedem um sabor especial. Do café da manhã à mesa de festa, nossa missão é adoçar a rotina da cidade.</p>
-  </div>
+<section class="banner">
+  <img src="/img/bolo.jpg" alt="" aria-hidden="true">
+  <div class="banner-shade"></div>
+  <ul class="banner-list reveal"><li>Tradição</li><li>Qualidade</li><li>Bons encontros</li></ul>
 </section>
 
 <section class="products" id="produtos">
   <div class="wrap">
     <div class="center reveal">
-      <p class="eyebrow dark">Vitrine</p>
+      <p class="eyebrow"><span></span>Cardápio<span></span></p>
       <h2>Nossos queridinhos</h2>
     </div>
     <div class="grid">
@@ -76,17 +93,16 @@
 
 <section class="order" id="encomendas">
   <div class="wrap narrow center reveal">
-    <p class="eyebrow">Encomendas</p>
-    <h2>Seu momento especial merece um sabor especial</h2>
+    <p class="script big">Seu momento especial merece um sabor especial</p>
     <p>Aniversários, casamentos, reuniões ou aquele presente de última hora. Fale com a gente e monte sua encomenda.</p>
-    <a class="btn light" href="https://www.instagram.com/padariascuritiba/" target="_blank" rel="noopener">Chamar no Instagram</a>
+    <a class="pill light" href="https://www.instagram.com/padariascuritiba/" target="_blank" rel="noopener">Chamar no Instagram <span aria-hidden="true">→</span></a>
   </div>
 </section>
 
 <section class="contact" id="contato">
   <div class="wrap two">
     <div class="reveal">
-      <p class="eyebrow dark">Contato</p>
+      <p class="eyebrow left">Contato</p>
       <h2>Venha nos visitar</h2>
       <p>Curitiba — PR</p>
       <p>Acompanhe novidades e promoções no Instagram <a href="https://www.instagram.com/padariascuritiba/" target="_blank" rel="noopener">@padariascuritiba</a>.</p>
@@ -95,9 +111,7 @@
   </div>
 </section>
 
-<footer>
-  <p>© <span id="y"></span> Padarias Curitiba · Doces Momentos</p>
-</footer>
+<footer><p>© <span id="y"></span> Padarias Curitiba · Doces Momentos</p></footer>
 <script src="/main.js"></script>
 </body>
 </html>
