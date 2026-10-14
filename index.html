@@ -24,8 +24,8 @@
   <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
   <nav id="menu">
     <a href="#top" class="active">Home</a>
-    <a href="#produtos">Cardápio</a>
-    <a href="#encomendas">Encomendas</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#cardapio">Encomendar</a>
     <a href="#contato">Contato</a>
   </nav>
   <a class="tel" href="tel:+554135014991">(41) 3501-4991</a>
@@ -56,7 +56,7 @@
       <li><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><ellipse cx="24" cy="18" rx="14" ry="6"/><ellipse cx="24" cy="30" rx="14" ry="6"/><path d="M10 18v12M38 18v12M10 24c4 3 24 3 28 0"/></g></svg><div><b>Doces e macarons</b><span>Cores e sabores</span></div></li>
       <li><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M8 18h32v20H8zM8 18l16-8 16 8M24 18v20M8 28h32"/></g></svg><div><b>Lanches e refeições</b><span>Mesas e clima casual</span></div></li>
     </ul>
-    <a class="pill" href="#produtos">Ver cardápio <span aria-hidden="true">→</span></a>
+    <a class="pill" href="#cardapio">Ver cardápio <span aria-hidden="true">→</span></a>
   </div>
 </section>
 
@@ -69,7 +69,7 @@
 <section class="products" id="produtos">
   <div class="wrap">
     <div class="center reveal">
-      <p class="eyebrow"><span></span>Cardápio<span></span></p>
+      <p class="eyebrow"><span></span>Vitrine<span></span></p>
       <h2>Nossos queridinhos</h2>
     </div>
     <div class="grid">
@@ -92,7 +92,42 @@
   </div>
 </section>
 
-<section class="order" id="encomendas">
+<section class="builder" id="cardapio">
+  <div class="wrap">
+    <div class="center reveal">
+      <p class="eyebrow"><span></span>Cardápio e encomendas<span></span></p>
+      <h2>Monte sua encomenda</h2>
+      <p class="lead">Escolha os itens, informe a data e o horário e envie direto para o nosso WhatsApp. Sem baixar PDF.</p>
+    </div>
+    <div class="builder-grid">
+      <div id="menu-list" class="menu-list"></div>
+      <aside id="cart" class="cart">
+        <h3>Sua encomenda</h3>
+        <ul id="cart-items" class="cart-items"></ul>
+        <div id="cart-total" class="cart-total" hidden></div>
+        <form id="order-form">
+          <label>Seu nome<input name="nome" required autocomplete="name"></label>
+          <label>Seu WhatsApp (opcional)<input name="fone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(41) 90000-0000"></label>
+          <div class="row2">
+            <label>Data desejada<input id="f-data" name="data" type="date" required></label>
+            <label>Horário<input name="hora" type="time" required></label>
+          </div>
+          <label>Retirada ou entrega
+            <select name="forma"><option>Retirada na loja</option><option>Entrega (a combinar)</option></select>
+          </label>
+          <label>Observações
+            <textarea name="obs" rows="4" placeholder="Sabor, tamanho, tema, dedicatória, alergias, quantidade de pessoas..."></textarea>
+          </label>
+          <p id="form-error" class="form-error" role="alert"></p>
+          <button class="pill wa" type="submit">Enviar pelo WhatsApp <span aria-hidden="true">→</span></button>
+          <p class="fine">Você será levado ao WhatsApp com o pedido já escrito. Valores e disponibilidade são confirmados pela equipe.</p>
+        </form>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="order">
   <div class="wrap narrow center reveal">
     <p class="script big">Seu momento especial merece um sabor especial</p>
     <p>Aniversários, casamentos, reuniões ou aquele presente de última hora. Chame a gente no WhatsApp e monte sua encomenda.</p>
@@ -128,6 +163,9 @@
 </section>
 
 <footer><p>Av. Sen. Salgado Filho, 1229 · Guabirotuba · Curitiba — PR · <a href="tel:+554135014991">(41) 3501-4991</a></p><p>© <span id="y"></span> Padarias Curitiba · Doces Momentos</p></footer>
+<button id="fab" class="fab" type="button" hidden></button>
+<script src="/menu.js"></script>
+<script src="/order.js"></script>
 <script src="/main.js"></script>
 </body>
 </html>
